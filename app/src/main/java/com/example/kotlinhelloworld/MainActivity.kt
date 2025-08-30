@@ -27,7 +27,8 @@ class MainActivity : ComponentActivity() {
             KotlinHelloWorldTheme {
                 Surface(modifier = Modifier.padding(10.dp).fillMaxSize()) {
                     Greeting(
-                        name = "World",
+                        name = "Rafael Andres Vargas Mamani",
+                        subject = "Aplicaciones Moviles",
                         modifier = Modifier
                     )
                 }
@@ -37,21 +38,21 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(name: String, subject: String, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center
     ) {
         Text(
             text = "Hello $name!",
-            fontSize = 100.sp,
-            lineHeight = 100.sp,
+            fontSize = 60.sp,
+            lineHeight = 60.sp,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
         )
 
         Text(
-            text = "From Rafael",
+            text = subject,
             fontSize = 36.sp,
             lineHeight = 36.sp,
             modifier = Modifier.fillMaxWidth(),
@@ -65,6 +66,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     KotlinHelloWorldTheme {
-        Greeting("World")
+        Greeting(name = "Rafael Andres Vargas Mamani", subject = "Aplicaciones moviles")
     }
 }
