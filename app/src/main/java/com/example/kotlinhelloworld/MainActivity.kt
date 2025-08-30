@@ -38,15 +38,15 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, subject: String, modifier: Modifier = Modifier) {
+fun Greeting(name: String, subject: String ,modifier: Modifier = Modifier) {
     Column(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Hello $name!",
-            fontSize = 60.sp,
-            lineHeight = 60.sp,
+            text = "$name!",
+            fontSize = 50.sp,
+            lineHeight = 50.sp,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
         )
@@ -66,6 +66,6 @@ fun Greeting(name: String, subject: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     KotlinHelloWorldTheme {
-        Greeting(name = "Rafael Andres Vargas Mamani", subject = "Aplicaciones moviles")
+        Greeting(name = "Rafael Andres Vargas Mamani", subject = "Aplicaciones Moviles")
     }
 }
